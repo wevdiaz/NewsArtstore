@@ -13,6 +13,11 @@
     <body>
 
         {% include "parts/header.njk" %}
+
+        {% block content %}
+        {% endblock content %}
+
+        {% include "parts/footer.njk" %}
         
     </body>
 </html>
