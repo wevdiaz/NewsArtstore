@@ -3,7 +3,7 @@
 ---
 
 
- Loja de artesanato e cultura popular.
+ Loja de artesanato e cultura pop.
  
  :construction: Em construção  :construction:
  
