@@ -9,7 +9,7 @@ routes.get("/", function(req, res) {
 routes.get("/products/create", ProductController.create );
 
 routes.get("/ads/create", function(req, res){
-    return res.redirect("/products/create.njk")
+    return res.redirect("/products/create")
 });
 
 module.exports = routes;
