@@ -8,6 +8,7 @@
 * {
     margin: 0;
     padding: 0;
+    border: 0;
 
     text-decoration: none;
 
@@ -51,8 +52,30 @@ header div.container a {
     color: white;
     font-size: 36px;
     line-height: 46px;
+    font-style: italic;
+    margin-bottom: 4px;
+}
+
+.logo h1 span.featured {
+    background-color:var(--primary-color);
+    color: black;
+    font-weight: 300;    
+    padding: 0 8px;
+    
 }
 
 .logo h2 {
     color: var(--primary-color);
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 2px;
+}
+
+
+/* - HEADER SEARCH - */
+.search input {
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 2px;
+    font-size: 16px;
 }
