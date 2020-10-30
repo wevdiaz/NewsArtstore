@@ -13,6 +13,8 @@
     text-decoration: none;
 
     list-style-type: none;
+
+    box-sizing: border-box;
 }
 
 html, body {
@@ -24,6 +26,12 @@ body {
     font-family: 'Roboto', sans-serif;
 
     background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 940px;
 }
 
 header, footer {
@@ -39,7 +47,7 @@ header, footer {
 header div.container {
     display: grid;
     grid-template-columns: 220px auto 280px;
-    grid-gap: 24px;
+    grid-gap: 26px;
     align-items: center;
 }
 
@@ -53,7 +61,7 @@ header div.container a {
     font-size: 36px;
     line-height: 46px;
     font-style: italic;
-    margin-bottom: 4px;
+    margin-bottom: 4px;    
 }
 
 .logo h1 span.featured {
@@ -79,3 +87,27 @@ header div.container a {
     border-radius: 2px;
     font-size: 16px;
 }
+
+/* - PRIMARY MENU - */
+nav.primary ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav.primary ul li a {
+    display: flex;
+    align-items: center;
+    
+    color: white;
+
+    transition: 200ms;
+}
+
+nav.primary ul li a:hover {
+    color: var(--primary-color);
+}
+
+nav.primary ul li a span {
+    margin-right: 8px;
+}
+
