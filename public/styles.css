@@ -139,4 +139,35 @@ section.form .header h3 {
     margin-bottom: 16px;
 }
 
+form .item {
+    margin-bottom: 16px;
+}
+
+form .item > div:nth-child(1) {
+    color: #777;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+form .item input[type="text"],
+form .item input[type="number"],
+form .item textarea,
+form .item select {
+    width: 100%;
+    padding: 8px 16px;
+
+    box-shadow: 2px 2px 2px -4px rgba(63, 63, 63, 0.5);
+
+    border: 1px solid #efefef;
+    border-radius: 4px;
+
+    font-size: 16px;
+}
+
+
+
 
