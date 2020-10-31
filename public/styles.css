@@ -34,6 +34,37 @@ body {
     max-width: 940px;
 }
 
+.button {
+    background-color: var(--primary-color);
+    color: black;
+
+    display: block;
+    margin: 16px 0;
+    padding: 12px 16px;
+
+    width: 100%;
+    border-radius: 4px;
+
+    align-self: end;
+
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+}
+
+.button:hover {
+    color: white;
+    filter: brightness(90%);
+}
+
+
+
 header, footer {
     background-color: black;
     color: white;
