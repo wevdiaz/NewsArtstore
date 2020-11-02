@@ -8,7 +8,7 @@ module.exports = {
 
             const categories = results.rows;
 
-            return res.render("products/create.njk"), { categories };
+            return res.render("products/create.njk", { categories } );
 
         }).catch(function(err){
             throw new Error(err);
