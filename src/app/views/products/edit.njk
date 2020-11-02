@@ -24,4 +24,16 @@
         </form>
     </section>
 
+    <script>
+        const formDelete = document.querySelector("#form-delete");
+
+        formDelete.addEventListener("submit", function(event){
+            const confirmation = confirm("Deseja Deletar o produto?");
+
+            if (!confirmation) {
+                event.preventDefault();
+            }
+        });
+    </script>
+
 {% endblock content %}
