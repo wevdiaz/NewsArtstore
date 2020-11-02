@@ -1,4 +1,5 @@
 const Category = require("../models/Category");
+const Product = require("../models/Product");
 
 module.exports = {
 
@@ -15,7 +16,7 @@ module.exports = {
         });
     },
 
-    post(req, res) {
+    async post(req, res) {
 
         const keys = Object.keys(req.body);
 
@@ -24,6 +25,15 @@ module.exports = {
                 return res.send("Please, fill all fields");
             }
         }
+
+        let results = await Product.create(req.body);
+        const productID = results.rows[0].id;
+
+        results = await Category.all();
+        const categories = results.rows;
+
+
+        return res.render("products/create.njk", { productID, categories });
 
     }
 }
