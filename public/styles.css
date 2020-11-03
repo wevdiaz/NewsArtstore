@@ -69,7 +69,7 @@ body {
 }
 
 .button.button.delete:hover {
-    background-color: #FF0099;
+    background-color: #fc85cc;
 }
 
 
@@ -179,6 +179,10 @@ section.form .header h3 {
     margin-bottom: 16px;
 }
 
+form .fields {
+    margin-bottom: 64px;
+}
+
 form .item {
     margin-bottom: 16px;
 }
@@ -224,9 +228,25 @@ form .item textarea {
     min-height: 150px;
 }
 
-form .fields {
-    margin-bottom: 64px;
+form .item span {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    border-radius: 16px;
+    color: #777;
+    
+    margin-right: 4px;
+    margin-top: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    width: 80px;
 }
+
+
 
 
 
