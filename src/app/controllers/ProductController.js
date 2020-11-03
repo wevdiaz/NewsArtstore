@@ -72,5 +72,10 @@ module.exports = {
             const oldProduct = await Product.find(req.body.id);
             req.body.old_price = oldProduct.rows[0].price
         }
+
+        await Product.update(req.body);
+
+        return res.redirect(`/products/${req.body.id}/edit`);
+        
     }
 }
