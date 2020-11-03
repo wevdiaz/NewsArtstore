@@ -63,6 +63,15 @@ body {
     filter: brightness(90%);
 }
 
+.button.delete {
+    background-color: lightgray;
+    color: white;
+}
+
+.button.button.delete:hover {
+    background-color: #FF0099;
+}
+
 
 
 header, footer {
