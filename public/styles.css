@@ -247,6 +247,18 @@ form .item span {
 }
 
 
+/* PHOTOS UPLOAD */
+
+form .item #photos-upload {
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    width: 200px;
+}
+
+
 
 
 
