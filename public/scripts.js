@@ -24,11 +24,14 @@ const PhotosUpload = {
     
     handleFileInput(event) {
         const { files: fileList } = event.target;
-        const { uploadLimit } = PhotosUpload.uploadLimit;
+        const { uploadLimit } = PhotosUpload;
 
         if (fileList.length > uploadLimit) {
             alert(`Envie no máximo ${uploadLimit} fotos`);
             event.preventDefault();
+            return;
         }
+
+       
     }
 }
