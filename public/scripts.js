@@ -32,7 +32,22 @@ const PhotosUpload = {
             return;
         }
 
-        Array.from(fileList).forEach((file) => {});
+        Array.from(fileList).forEach((file) => {
+            const reader = new FileReader();
+
+            reader.onload = () => {
+                const image = new image();
+                image.src = String(reader.result);
+
+                const div = document.createElement("div");
+                div.classList.add("photo");
+
+                div.onclick = ("Irá remover a imagem")
+
+            }
+
+            reader.readAsDataURL(file);
+        });
 
        
     }
