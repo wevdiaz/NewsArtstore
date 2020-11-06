@@ -36,13 +36,18 @@ const PhotosUpload = {
             const reader = new FileReader();
 
             reader.onload = () => {
-                const image = new image();
+
+                const image = new Image();
                 image.src = String(reader.result);
 
                 const div = document.createElement("div");
                 div.classList.add("photo");
 
-                div.onclick = ("Irá remover a imagem")
+                div.onclick = () => alert("Irá remover a imagem");
+
+                div.appendChild(image);
+
+                document.querySelector("#photos-preview").appendChild(div);
 
             }
 
