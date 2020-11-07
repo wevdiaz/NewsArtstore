@@ -26,13 +26,8 @@ const PhotosUpload = {
     
     handleFileInput(event) {
         const { files: fileList } = event.target;
-        const { uploadLimit } = PhotosUpload;
 
-        if (fileList.length > uploadLimit) {
-            alert(`Envie no máximo ${uploadLimit} fotos`);
-            event.preventDefault();
-            return;
-        }
+        if (PhotosUpload.hasLimit(event)) return;       
 
         Array.from(fileList).forEach((file) => {
             const reader = new FileReader();
@@ -52,6 +47,18 @@ const PhotosUpload = {
         });
 
        
+    },
+
+    hasLimit(event) {
+        const { uploadLimit } = PhotosUpload;
+
+        if (fileList.length > uploadLimit) {
+            alert(`Envie no máximo ${uploadLimit} fotos`);
+            event.preventDefault();
+            return true;
+        }
+
+        return false
     },
 
     getContainer(image) {
