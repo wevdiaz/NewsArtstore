@@ -20,6 +20,8 @@ const Mask = {
 
 const PhotosUpload = {
 
+    preview: document.querySelector("#photos-preview"),
+
     uploadLimit: 5,
     
     handleFileInput(event) {
@@ -40,14 +42,9 @@ const PhotosUpload = {
                 const image = new Image();
                 image.src = String(reader.result);
 
-                const div = document.createElement("div");
-                div.classList.add("photo");
-
-                div.onclick = () => alert("Irá remover a imagem");
-
-                div.appendChild(image);
-
-                document.querySelector("#photos-preview").appendChild(div);
+                const div = PhotosUpload.getContainer(image);
+                
+                PhotosUpload.preview.appendChild(div);
 
             }
 
@@ -55,5 +52,15 @@ const PhotosUpload = {
         });
 
        
+    },
+
+    getContainer(image) {
+        const div = document.createElement("div");
+
+        div.classList.add("photo");
+
+        div.onclick = () => alert("Irá remover a imagem");
+
+        div.appendChild(image);
     }
 }
