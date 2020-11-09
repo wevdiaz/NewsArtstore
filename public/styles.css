@@ -228,7 +228,7 @@ form .item textarea {
     min-height: 150px;
 }
 
-form .item span {
+form .item span.button-radio {
     padding: 8px 16px;
     background-color: var(--primary-color);
     border-radius: 16px;
