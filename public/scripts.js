@@ -51,6 +51,7 @@ const PhotosUpload = {
 
     hasLimit(event) {
         const { uploadLimit } = PhotosUpload;
+        const { files: fileList } = event.target;
 
         if (fileList.length > uploadLimit) {
             alert(`Envie no máximo ${uploadLimit} fotos`);
@@ -69,6 +70,10 @@ const PhotosUpload = {
         div.onclick = () => alert("Irá remover a imagem");
 
         div.appendChild(image);
+
+        div.appendChild(PhotosUpload.getRemoveButton());
+
+        return div;
     },
 
     getRemoveButton() {
