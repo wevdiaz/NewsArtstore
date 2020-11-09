@@ -81,5 +81,13 @@ const PhotosUpload = {
         button.classList.add("material-icons");
         button.innerHTML = "close";
         return button;
+    },
+
+    removePhoto(event) {
+        const photoDiv = event.target.parentNode;
+        const photosArray = Array.from(PhotosUpload.preview.children);
+        const index = photosArray.indexOf(photoDiv);
+
+        photoDiv.remove();
     }
 }
