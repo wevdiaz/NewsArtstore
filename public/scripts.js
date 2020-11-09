@@ -69,5 +69,12 @@ const PhotosUpload = {
         div.onclick = () => alert("Irá remover a imagem");
 
         div.appendChild(image);
+    },
+
+    getRemoveButton() {
+        const button = document.createElement("span");
+        button.classList.add("material-icons");
+        button.innerHTML = "close";
+        return button;
     }
 }
