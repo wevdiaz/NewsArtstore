@@ -67,7 +67,7 @@ const PhotosUpload = {
 
         div.classList.add("photo");
 
-        div.onclick = () => alert("Irá remover a imagem");
+        div.onclick = PhotosUpload.removePhoto;
 
         div.appendChild(image);
 
