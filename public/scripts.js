@@ -20,6 +20,8 @@ const Mask = {
 
 const PhotosUpload = {
 
+    input: "",
+
     preview: document.querySelector("#photos-preview"),
 
     uploadLimit: 5,
@@ -27,6 +29,7 @@ const PhotosUpload = {
     
     handleFileInput(event) {
         const { files: fileList } = event.target;
+        PhotosUpload.input = event.target;
 
         if (PhotosUpload.hasLimit(event)) return;       
 
@@ -50,12 +53,12 @@ const PhotosUpload = {
             reader.readAsDataURL(file);
         });
 
-       event.target.files = PhotosUpload.getAllFiles();
+       PhotosUpload.input.files = PhotosUpload.getAllFiles();
     },
 
     hasLimit(event) {
-        const { uploadLimit } = PhotosUpload;
-        const { files: fileList } = event.target;
+        const { uploadLimit, input: fileList } = PhotosUpload;
+        
 
         if (fileList.length > uploadLimit) {
             alert(`Envie no máximo ${uploadLimit} fotos`);
@@ -99,6 +102,10 @@ const PhotosUpload = {
         const photoDiv = event.target.parentNode;
         const photosArray = Array.from(PhotosUpload.preview.children);
         const index = photosArray.indexOf(photoDiv);
+
+        PhotosUpload.files.splice(index, 1);
+        PhotosUpload.input.files = PhotosUpload.getAllFiles();
+
 
         photoDiv.remove();
     }
