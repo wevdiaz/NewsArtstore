@@ -50,7 +50,7 @@ const PhotosUpload = {
             reader.readAsDataURL(file);
         });
 
-       PhotosUpload.getAllFiles();
+       event.target.files = PhotosUpload.getAllFiles();
     },
 
     hasLimit(event) {
@@ -67,11 +67,11 @@ const PhotosUpload = {
     },
 
     getAllFiles() {
-        const dataTransfer = new DataTransfer();
+        const dataTransfer =new ClipboardEvent("").clipboardData || new DataTransfer();
 
         PhotosUpload.files.forEach(file => dataTransfer.items.add(file));
 
-        console.log(dataTransfer);
+        return dataTransfer.files;
     },
 
     getContainer(image) {
