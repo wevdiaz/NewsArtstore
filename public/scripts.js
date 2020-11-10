@@ -23,6 +23,7 @@ const PhotosUpload = {
     preview: document.querySelector("#photos-preview"),
 
     uploadLimit: 5,
+    files: [],
     
     handleFileInput(event) {
         const { files: fileList } = event.target;
@@ -30,6 +31,9 @@ const PhotosUpload = {
         if (PhotosUpload.hasLimit(event)) return;       
 
         Array.from(fileList).forEach((file) => {
+
+            PhotosUpload.files.push(file);
+
             const reader = new FileReader();
 
             reader.onload = () => {
@@ -46,7 +50,7 @@ const PhotosUpload = {
             reader.readAsDataURL(file);
         });
 
-       
+       PhotosUpload.getAllFiles();
     },
 
     hasLimit(event) {
@@ -60,6 +64,14 @@ const PhotosUpload = {
         }
 
         return false
+    },
+
+    getAllFiles() {
+        const dataTransfer = new DataTransfer();
+
+        PhotosUpload.files.forEach(file => dataTransfer.items.add(file));
+
+        console.log(dataTransfer);
     },
 
     getContainer(image) {
