@@ -27,13 +27,13 @@ module.exports = {
             }
         }
 
+        if (req.files.length == 0) {
+            return res.send("Please, send at least one image");
+        }
+
         let results = await Product.create(req.body);
         const productID = results.rows[0].id;
-
-        // results = await Category.all();
-        // const categories = results.rows;
-
-
+        
         return res.redirect(`/products/${productID}/edit`);
 
     },
