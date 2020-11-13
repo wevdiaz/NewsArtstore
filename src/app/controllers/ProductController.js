@@ -54,8 +54,12 @@ module.exports = {
         product.old_price = formatPrice(product.old_price);
         product.price = formatPrice(product.price);
         
+        // Get Category
         results = await Category.all();
         const categories = results.rows;
+
+        // Get Images
+        results = await Product.files(product.id);
 
         return res.render("products/edit.njk", { product, categories});
         
