@@ -44,7 +44,16 @@
         > 
         <p>Selecione até 5 fotos</p>
        </div> 
-       <div id="photos-preview"></div>          
+       <div id="photos-preview">
+           {% if files %}
+            {% for image in files %}
+                <div class="photo" id="{{image.id}}">
+                    <img src="{{image.src}}" alt="{{image.name}}">
+                    <span class="material-icons" onclick="" >close</span>
+                </div>
+            {% endfor %}
+           {% endif %}
+       </div>          
     </div>
 </div>
 
