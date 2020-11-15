@@ -21,5 +21,11 @@ module.exports = {
 
         return db.query(query, values);
 
+    },
+
+    delete(id) {
+        return db.query(`
+            DELETE FROM files WHERE id = $1
+        `, [id]);
     }
 }
