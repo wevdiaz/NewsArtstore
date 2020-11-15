@@ -89,11 +89,6 @@ module.exports = {
             await Promise.all(removedFilesPromise);
         }
 
-
-
-
-
-
         req.body.price = req.body.price.replace(/\D/g, "");
 
         if (req.body.old_price != req.body.price) {
