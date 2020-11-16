@@ -9,6 +9,7 @@ routes.get("/", function(req, res) {
 });
 
 routes.get("/products/create", ProductController.create );
+routes.get("/products/:id", ProductController.show );
 routes.get("/products/:id/edit", ProductController.edit );
 routes.post("/products", multer.array("photos", 5), ProductController.post );
 routes.put("/products", multer.array("photos", 5), ProductController.put );
