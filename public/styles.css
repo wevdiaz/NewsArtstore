@@ -348,6 +348,14 @@ form .item #photos-preview img {
     border-radius: 4px;
 }
 
+.product-single .gallery {
+    width: 100%;
+}
+
+.product-single .gallery img {
+    width: 100%;
+}
+
 
 
 
