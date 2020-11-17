@@ -26,12 +26,18 @@ body {
     font-family: 'Roboto', sans-serif;
 
     background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
     width: 90%;
     margin: 0 auto;
     max-width: 940px;
+}
+
+footer {
+    margin-top: auto;
 }
 
 .button {
