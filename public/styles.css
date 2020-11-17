@@ -376,6 +376,22 @@ form .item #photos-preview img {
     letter-spacing: 0.4px;
 }
 
+/* === PRICE-BUY === */
+.product-single .price-buy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 8px;
+    border-top: 1px solid #eee;
+}
+
+.product-single .price-buy .price {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
 
 
 
