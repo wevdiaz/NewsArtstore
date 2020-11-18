@@ -409,6 +409,10 @@ form .item #photos-preview img {
     margin-left: 8px;
 }
 
+.product-single .price-buy .buy .unavailable {
+    font-weight: bold;
+}
+
 .product-single .price-buy .buy button {
     font-size: 14px;
     letter-spacing: .4px;
