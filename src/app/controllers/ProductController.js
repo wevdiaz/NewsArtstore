@@ -42,8 +42,14 @@ module.exports = {
 
     },
 
-    show(req, res) {
-        return res.render("products/show")
+    async show(req, res) {
+
+        let results = await Product.find(req.params.id);
+        const product = results.rows[0];
+
+        if (!product) return res.send("Product not found!");
+
+        return res.render("products/show", { product });
     },
 
     async edit(req, res) {
