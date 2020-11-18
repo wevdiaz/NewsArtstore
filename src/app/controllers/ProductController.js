@@ -1,4 +1,4 @@
-const { formatPrice } = require("../../lib/utils");
+const { formatPrice, date } = require("../../lib/utils");
 const Category = require("../models/Category");
 const Product = require("../models/Product");
 const File = require("../models/File");
@@ -49,6 +49,16 @@ module.exports = {
 
         if (!product) return res.send("Product not found!");
 
+        const { day, month, hour, minutes } = date(product.updated_at);
+        
+        product.published = {
+            day: `${day}/${month}`,           
+            hour:`${hour}h${minutes}`            
+        }
+
+        product.oldPrice = formatPrice(product.old_price);
+        product.price = formatPrice(product.price);
+        
         return res.render("products/show", { product });
     },
 
@@ -118,7 +128,7 @@ module.exports = {
 
         await Product.update(req.body);
 
-        return res.redirect(`/products/${req.body.id}/edit`);
+        return res.redirect(`/products/${req.body.id}`);
         
     },
 
