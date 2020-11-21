@@ -138,3 +138,18 @@ const PhotosUpload = {
     }
 
 }
+
+
+const ImageGallery = {
+
+    preview: document.querySelectorAll(".gallery-preview img"),
+
+    setImage(e) {
+        const { target } = e;
+
+        ImageGallery.preview.forEach(preview => preview.classList.remove("active"));
+
+        target.classList.add("active");
+    }
+}
+
