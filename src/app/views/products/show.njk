@@ -11,6 +11,13 @@
                 {% else %}
                     <img src="{{files[0}.src}}" alt="{{files[0}.name}}">
                 {% endif %}
+
+                <div class="lightbox-target">
+                    <img src="{{files[0].src}}" alt="{{files[0}.name}}">
+                    <a href="#" class="lightbox-close">
+                        <span class="material-icons">close</span>
+                    </a>
+                </div>
             </div>
             <div class="gallery-preview">
                 {% for image in files %}
