@@ -404,7 +404,25 @@ form .item #photos-preview img {
     z-index: 100;
 
     left: 0;
+    
+}
 
+.product-single .highlight .lightbox-target img {
+    margin: auto;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    background-color: white;
+    box-shadow:  0 0 8px rgba(0, 0, 0, 0.3);
+
+    width: 90%;
+    height: 90%;
+
+    object-fit: contain;
 }
 
 /* === PRODUCT SINGLE INFO === */
