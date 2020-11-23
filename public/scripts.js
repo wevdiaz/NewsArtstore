@@ -153,6 +153,7 @@ const ImageGallery = {
         target.classList.add("active");
 
         ImageGallery.highlight.src = target.src;
+        Lightbox.image.src = target.src;
     }
 }
 
