@@ -363,8 +363,7 @@ form .item #photos-preview img {
     width: 100%;
     height: 280px;
 
-    object-fit: none;
-    object-position: 50% 50%;
+    object-fit: contain;    
     border: 1px solid #efefef;
 
     cursor: zoom-in;
