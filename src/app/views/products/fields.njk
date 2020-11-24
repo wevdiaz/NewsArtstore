@@ -30,7 +30,33 @@
     </div>
 </div>
 
-{# Campo de foto #}
+<div class="item">
+    <div>Fotos</div>
+    <div>
+       <div id="photos-upload">
+           <input 
+            id="photos-input" 
+            type="file" 
+            name="photos"
+            multiple
+            accept="image/*"
+            onchange= "PhotosUpload.handleFileInput(event)"
+        > 
+        <p>Selecione até 5 fotos</p>
+       </div> 
+       <div id="photos-preview">
+           {% if files %}
+            {% for image in files %}
+                <div class="photo" id="{{image.id}}">
+                    <img src="{{image.src}}" alt="{{image.name}}">
+                    <span class="material-icons" onclick="PhotosUpload.removeOldPhoto(event)" >close</span>
+                </div>
+            {% endfor %}
+            <input type="hidden" name="removed_files">
+           {% endif %}
+       </div>          
+    </div>
+</div>
 
 <div class="item">
     <div>Preço</div>
@@ -64,7 +90,7 @@
     <div class="item">
         <div>Disponível</div>
         <div>
-            <span>
+            <span class="button-radio">
                 <input 
                     type="radio"
                     name="status"
@@ -74,7 +100,7 @@
                     {% endif %}
                 >Sim
             </span>
-            <span>
+            <span class="button-radio">
                 <input 
                     type="radio"
                     name="status"
