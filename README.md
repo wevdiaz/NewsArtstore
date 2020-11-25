@@ -2,9 +2,22 @@
 
 ---
 
+### :speech_balloon: Sobre
 
- Loja de artesanato e cultura pop.
+Uma aplicação de uma loja on-line, o projeto já possui cadastro de produto e integração com o banco de dados, sendo desenvolvido com base no bootcamp da [rocketseat](https://rocketseat.com.br). Com um desginer moderno estou criando uma loja de produtos geek. :smile:
+
  
- :construction: Em construção  :construction:
  
- 
+### :hammer_and_wrench: Tecnologias
+
+* HTML5 / CSS3
+* Javascript
+* Nodejs
+* Express
+* Nunjucks
+* PostgreSQL
+
+
+:construction: Em construção  :construction:
+
+Projeto sendo desenvolvido com :blue_heart: e animação  :star_struck: . Rumo ao próximo nível :rocket:
