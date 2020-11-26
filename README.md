@@ -20,4 +20,8 @@ Uma aplicação de uma loja on-line, o projeto já possui cadastro de produto e 
 
 :construction: Em construção  :construction:
 
+### :scroll: Licença
+
+Esse projeto está sob a licença [MIT](https://github.com/wevdiaz/NewsArtstore/blob/main/LICENSE)
+
 Projeto sendo desenvolvido com :blue_heart: e animação  :star_struck: . Rumo ao próximo nível :rocket:
