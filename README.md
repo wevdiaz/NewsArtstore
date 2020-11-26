@@ -2,6 +2,24 @@
 
 ---
 
+<p align="center">
+ 
+ <a>
+    <img src="https://img.shields.io/github/license/wevdiaz/NewsArtstore?color=%23CCFF00">
+ </a>
+ 
+  <a>
+    <img src="https://img.shields.io/github/repo-size/wevdiaz/NewsArtstore?color=%23CCFF00">
+  </a>
+  
+   <a>
+    <img src="https://img.shields.io/github/languages/count/wevdiaz/NewsArtstore?color=%23CCFF00">
+   </a>
+   
+   
+   
+</p>
+
 ### :speech_balloon: Sobre
 
 Uma aplicação de uma loja on-line, o projeto já possui cadastro de produto e integração com o banco de dados, sendo desenvolvido com base no bootcamp da [rocketseat](https://rocketseat.com.br). Com um desginer moderno estou criando uma loja de produtos geek. :smile:
