@@ -10,5 +10,17 @@ module.exports = {
         const products = results.rows;
 
         if (!products) return res.send("Products not found!");
+
+        async function getImage(productId) {
+            let results = await Product.files(productId);
+            const files = results.rows.map(file => ({
+                ...file,
+                src: `${req.protocol}://${req.headers.host}${file.path.replace("public", "")}`
+            }));
+
+            return files[0];
+        }
+
+        
     }
 }
