@@ -504,6 +504,22 @@ form .item #photos-preview img {
     letter-spacing: .4px;
 }
 
+/* SHOP */
+.shop h2 {
+    margin: 48px;
+}
+
+.shop .items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-gap: 32px;
+}
+
+.shop .product {
+    display: grid;    
+}
+
 
 
 
