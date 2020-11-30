@@ -1,7 +1,7 @@
 const { formatPrice } = require("../../lib/utils");
 
 const Product = require("../models/Product");
-const File = require("../models/File");
+
 
 module.exports = {
 
@@ -18,7 +18,7 @@ module.exports = {
             return files[0];
         }
 
-        const productsPromise = products.map(product => {
+        const productsPromise = products.map(async product => {
             product.img = await getImage(product.id);
             product.oldPrice = formatPrice(product.old_price);
             product.price = formatPrice(product.price);
