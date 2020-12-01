@@ -26,7 +26,7 @@ module.exports = {
         }).filter((product, index) => index > 2 ? false : true);
 
         const lastAdded = await Promise.all(productsPromise);
-
+        
         return res.render("home/index", { products: lastAdded });
     }
 }
