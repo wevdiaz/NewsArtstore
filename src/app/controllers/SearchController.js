@@ -19,6 +19,12 @@ module.exports = {
 
             params.filter = filter;
 
+            if (category) {
+                params.category = category;
+            }
+
+            results = await Product.search(params);
+
 
             return res.render("search/index", { products });
 
