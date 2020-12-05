@@ -101,20 +101,15 @@ module.exports = {
             ${filterQuery}
             products.name ilike '%${filter}%'
             OR products.description ilike '%${filter}%'
-        `
-
-        let total_query = `(
-            SELECT count(*) FROM products
-            ${filterQuery}
-        ) AS total  `
+        `       
 
         query = `
-            SELECT products.*, ${total_query}, 
+            SELECT products.*, 
             categories.name AS category_name
             FROM products
             LEFT JOIN categories ON (categories.id = products.category_id)
             ${filterQuery}
-            GROUP BY products.id, categories.name
+            GROUP BY categories.name
         `
 
         return db.query(query);
