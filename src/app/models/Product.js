@@ -108,8 +108,7 @@ module.exports = {
             categories.name AS category_name
             FROM products
             LEFT JOIN categories ON (categories.id = products.category_id)
-            ${filterQuery}
-            GROUP BY categories.name
+            ${filterQuery}            
         `
 
         return db.query(query);
