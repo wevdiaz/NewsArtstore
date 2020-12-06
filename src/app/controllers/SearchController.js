@@ -52,7 +52,7 @@ module.exports = {
             }));
 
 
-            return res.render("search/index", { products, categories });
+            return res.render("search/index", { products, categories, search });
 
         }catch(err) {
             console.error(err);
