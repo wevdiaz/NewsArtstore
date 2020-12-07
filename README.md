@@ -2,6 +2,10 @@
 
 ---
 
+<p align="center">  
+  <img src="https://raw.githubusercontent.com/wevdiaz/NewsArtstore/main/imgs_app/home_page.png" alt="imagem ilustrativa da aplicação">
+</p>
+
 <p align="center">
  
  <a>
@@ -22,7 +26,7 @@
 
 ### :speech_balloon: Sobre
 
-Uma aplicação de uma loja on-line, o projeto já possui cadastro de produto e integração com o banco de dados, sendo desenvolvido com base no bootcamp da [rocketseat](https://rocketseat.com.br). Com um desginer moderno estou criando uma loja de produtos geek. :smile:
+Uma aplicação de uma loja on-line sendo desenvolvida para  aprendizado e técnicas de desenvolvimento web. O projeto já possui cadastro de produto e integração com o banco de dados, sendo desenvolvido com base no bootcamp da [rocketseat](https://rocketseat.com.br). Com um designer moderno estou criando uma loja de produtos geek. :smile:
 
  
  
