@@ -45,3 +45,28 @@ CREATE TABLE "users" (
 
 -- foreign Key
 ALTER TABLE "products" ADD FOREIGN KEY ("user_id") REFERENCES "users"  ("id");
+
+-- Create procedure
+CREATE FUNCTION trigger_set_timestamp()
+RETURNS TRIGGER AS $$
+BEGIN
+ NEW.updated_at = NOW();
+ RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+
+-- Auto updated_at in Products
+CREATE TRIGGER set_timestamp
+BEFORE UPDATE ON products
+FOR EACH ROW
+EXECUTE PROCEDURE trigger_set_timestamp();
+
+-- Auto updated_at in Users
+CREATE TRIGGER set_timestamp
+BEFORE UPDATE ON users
+FOR EACH ROW
+EXECUTE PROCEDURE trigger_set_timestamp();
+
+
+
