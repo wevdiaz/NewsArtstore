@@ -1,3 +1,6 @@
+DROP DATABASE IF EXISTS newsartstore;
+CREATE DATABASE newsartstore;
+
 CREATE TABLE "products" (
   "id" SERIAL PRIMARY KEY,
   "category_id" int NOT NULL,
@@ -27,3 +30,18 @@ CREATE TABLE "files" (
 ALTER TABLE "products" ADD FOREIGN KEY ("category_id") REFERENCES "categories" ("id");
 
 ALTER TABLE "files" ADD FOREIGN KEY ("product_id") REFERENCES "products" ("id");
+
+CREATE TABLE "users" (
+  "id" SERIAL PRIMARY KEY,  
+  "name" text NOT NULL,
+  "email" text UNIQUE NOT NULL,
+  "password" text NOT NULL,
+  "cpf_cnpj" text UNIQUE NOT NULL,
+  "cep" text,
+  "address" text,
+  "created_at" timestamp DEFAULT (now()),
+  "updated_at" timestamp DEFAULT (now())
+);
+
+-- foreign Key
+ALTER TABLE "products" ADD FOREIGN KEY ("user_id") REFERENCES "users"  ("id");
