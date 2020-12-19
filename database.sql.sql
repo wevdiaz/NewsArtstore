@@ -69,4 +69,7 @@ FOR EACH ROW
 EXECUTE PROCEDURE trigger_set_timestamp();
 
 
-
+-- categories name
+INSERT INTO categories(name) VALUES ('Quadrinhos')
+INSERT INTO categories(name) VALUES ('Bonecos')
+INSERT INTO categories(name) VALUES ('Canecas')
