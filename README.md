@@ -40,7 +40,7 @@ Uma aplicação de uma loja on-line sendo desenvolvida para  aprendizado e técn
 * PostgreSQL
 
 
-:construction: Em construção  :construction:
+:construction: Em construção: Seção de cadastro de usuário e validação  :construction:
 
 ### :scroll: Licença
 
