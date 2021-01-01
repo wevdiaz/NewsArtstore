@@ -228,7 +228,7 @@ const Lightbox = {
 const Validate = {
 
     apply(input, func) {
-        
+        Validate.clearErrors(input);
 
         let results = Validate[func](input.value);
         input.value = results.value;
@@ -246,6 +246,14 @@ const Validate = {
         input.parentNode.appendChild(div);
 
         input.focus();
+    },
+
+    clearErrors(input) {
+        const errorDiv = input.parentNode.querySelector(".error");
+
+        if (errorDiv) {
+            errorDiv.remove();
+        }
     },
 
     
