@@ -1,4 +1,5 @@
 const db = require("../../config/db");
+const { hash } = require("bcryptjs");
 
 module.exports = {
 
@@ -35,7 +36,7 @@ module.exports = {
             RETURNING id
         `
 
-        const passwordHash = "";
+        const passwordHash = await hash(data.password, 8);
 
         const values = [
             data.name,
