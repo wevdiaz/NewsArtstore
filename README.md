@@ -26,7 +26,13 @@
 
 ### :speech_balloon: Sobre
 
-Uma aplicação de uma loja on-line sendo desenvolvida para  aprendizado e técnicas de desenvolvimento web. O projeto já possui cadastro de produto e integração com o banco de dados, sendo desenvolvido com base no bootcamp da [rocketseat](https://rocketseat.com.br). Com um designer moderno estou criando uma loja de produtos geek. :smile: . Veja algumas imagens da aplicação sendo desenvolvida [clicando aqui](https://github.com/wevdiaz/NewsArtstore/tree/main/imgs_app).
+Uma aplicação de uma loja on-line sendo desenvolvida para  aprendizado e técnicas de desenvolvimento web. O projeto já possui cadastro de produto e integração com o banco de dados, sendo desenvolvido com base no bootcamp da [rocketseat](https://rocketseat.com.br). Com um designer moderno estou criando uma loja de produtos geek. :smile: . Veja algumas imagens da aplicação sendo desenvolvida [clicando aqui](https://github.com/wevdiaz/NewsArtstore/tree/main/imgs_app). Atividades implementadas:
+
+* Cadastro de produtos.
+* Seção de upload de imagens
+* Possibilidade de atualização e apagarproduto
+* Cadastro de usuário
+* Máscaras aplicadas para campos CEP, CPF e email
 
  
  
@@ -40,7 +46,7 @@ Uma aplicação de uma loja on-line sendo desenvolvida para  aprendizado e técn
 * PostgreSQL
 
 
-:construction: Em construção: Seção de cadastro de usuário e validação  :construction:
+:construction: Em construção: Desenvolvimento de Sessão de Usuário para controle de login e demais acessos  :construction:
 
 ### :scroll: Licença
 
