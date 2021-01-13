@@ -73,3 +73,13 @@ EXECUTE PROCEDURE trigger_set_timestamp();
 INSERT INTO categories(name) VALUES ('Quadrinhos')
 INSERT INTO categories(name) VALUES ('Bonecos')
 INSERT INTO categories(name) VALUES ('Canecas')
+
+
+-- connect pg simple table
+CREATE TABLE "session" (
+  "sid" varchar NOT NULL COLLATE "default",
+  "sess" json NOT NULL,
+  "expire" timestamp(6) NOT NULL
+)
+WITH (OIDS=FALSE);
+ALTER TABLE "session" ADD CONSTRAINT "session_pkey" PRIMARY key ("sid") NOT DEFERRABLE INITIALLY IMMEDIATE;
