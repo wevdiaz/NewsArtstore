@@ -8,13 +8,8 @@ module.exports = {
     },
 
     async show(req, res) {
-        const { userId: id } = req.session;
 
-        const user = await User.findOne({ where: { id }});
-
-        if (!user) return res.render("user/register", {
-            error: "Usuário não encontrado"
-        });
+        const { user } = req;        
 
         user.cpf_cnpj = formatCpfCnpj(user.cpf_cnpj);
         user.cep = formatCep(user.cep);
@@ -29,5 +24,7 @@ module.exports = {
         req.session.userId = userId;
         
         return res.redirect('/users');
-    }
+    },
+
+    async update(req, res, next) {}
 }
