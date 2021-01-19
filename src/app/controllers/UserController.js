@@ -29,6 +29,8 @@ module.exports = {
     async update(req, res, next) {
 
         try {
+            const { user } = req;
+
             let { name, email, cpf_cnpj, cep, address } = req.body;
 
             cpf_cnpj = cpf_cnpj.replace(/\D/g, "");
@@ -43,6 +45,7 @@ module.exports = {
             });
 
             return res.render("user/index", {
+                user: req.body,
                 success: "conta atualizada com sucesso!"
             });
 
