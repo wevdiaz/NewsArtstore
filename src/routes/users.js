@@ -1,6 +1,6 @@
 const express = require("express");
 const routes = express.Router();
-const { isLoggedRedirectToUsers } = require("../app/middlewares/session");
+const { isLoggedRedirectToUsers, onlyUsers } = require("../app/middlewares/session");
 
 const SessionController = require("../app/controllers/SessionController");
 const UserController = require("../app/controllers/UserController");
@@ -25,7 +25,7 @@ routes.post("/logout", SessionController.logout );
 routes.get("/register", UserController.registerForm );
 routes.post("/register", UserValidator.post, UserController.post );
 
-routes.get("/", UserValidator.show, UserController.show );
+routes.get("/", onlyUsers, UserValidator.show, UserController.show );
 routes.put("/", UserValidator.update, UserController.update );
 // routes.delete("/", UserController.delete );
 
