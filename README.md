@@ -3,7 +3,7 @@
 ---
 
 <p align="center">  
-  <img src="https://raw.githubusercontent.com/wevdiaz/NewsArtstore/main/imgs_app/home_page.png" alt="imagem ilustrativa da aplicação">
+  
 </p>
 
 <p align="center">
