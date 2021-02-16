@@ -71,6 +71,7 @@ module.exports = {
         }catch(err) {
             console.error(err);
             res.render("user/index", {
+                user: req.body,
                 error: "Erro ao tentar deletar sua conta!"
             });
         }
