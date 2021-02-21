@@ -3,7 +3,7 @@
 ---
 
 <p align="center">  
-  
+  <img src="https://raw.githubusercontent.com/wevdiaz/NewsArtstore/main/imgs_app/home.png">
 </p>
 
 <p align="center">
@@ -33,6 +33,8 @@ Uma aplicação de uma loja on-line sendo desenvolvida para  aprendizado e técn
 * Possibilidade de atualização e apagarproduto
 * Cadastro de usuário
 * Máscaras aplicadas para campos CEP, CPF e email
+* Recuperação de senha
+* sistema de login
 
  
  
@@ -46,7 +48,7 @@ Uma aplicação de uma loja on-line sendo desenvolvida para  aprendizado e técn
 * PostgreSQL
 
 
-:construction: Em construção: Desenvolvimento de Sessão de Usuário para controle de login e demais acessos  :construction:
+:construction: README Em construção :construction:
 
 ### :scroll: Licença
 
