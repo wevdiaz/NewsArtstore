@@ -7,6 +7,14 @@
 </p>
 
 <p align="center">
+    <a href="#speech_balloon-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#hammer_and_wrench-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#gear-requesitos">Requesitos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#scroll-licença">Licença</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="https://github.com/wevdiaz/NewsArtstore/tree/main/imgs_app">Imagens</a>
+</p>
+
+<p align="center">
  
  <a>
     <img src="https://img.shields.io/github/license/wevdiaz/NewsArtstore?color=%23CCFF00">
@@ -26,11 +34,11 @@
 
 ### :speech_balloon: Sobre
 
-Uma aplicação de uma loja on-line sendo desenvolvida para  aprendizado e técnicas de desenvolvimento web. O projeto já possui cadastro de produto e integração com o banco de dados, sendo desenvolvido com base no bootcamp da [rocketseat](https://rocketseat.com.br). Com um designer moderno estou criando uma loja de produtos geek. :smile: . Veja algumas imagens da aplicação sendo desenvolvida [clicando aqui](https://github.com/wevdiaz/NewsArtstore/tree/main/imgs_app). Atividades implementadas:
+Uma aplicação de uma loja on-line sendo desenvolvida para  aprendizado e técnicas de desenvolvimento web. O projeto já possui cadastro de produto e integração com o banco de dados, sendo desenvolvido com base no bootcamp da [rocketseat](https://rocketseat.com.br). Com um designer moderno está sendo criado uma loja de produtos diversos. :smile: . Veja algumas imagens da aplicação sendo desenvolvida [clicando aqui](https://github.com/wevdiaz/NewsArtstore/tree/main/imgs_app). Atividades implementadas:
 
 * Cadastro de produtos.
 * Seção de upload de imagens
-* Possibilidade de atualização e apagarproduto
+* Possibilidade de atualização e apagar o produto
 * Cadastro de usuário
 * Máscaras aplicadas para campos CEP, CPF e email
 * Recuperação de senha
@@ -48,7 +56,14 @@ Uma aplicação de uma loja on-line sendo desenvolvida para  aprendizado e técn
 * PostgreSQL
 
 
-:construction: README Em construção :construction:
+
+
+### :gear: Requesitos
+
+* Necessário instalar o node js.*
+
+* npm install -> para instalar as dependências necessárias do projeto.
+* npm start -> para rodar aplicação
 
 ### :scroll: Licença
 
