@@ -6,9 +6,9 @@ module.exports = {
 
     ...Base,
 
-    files(id) {
-    return db.query(`
-        SELECT * FROM files WHERE product_id = $1`, [id]);
+    async files(id) {
+        const results = await db.query(`SELECT * FROM files WHERE product_id = $1`, [id]);
+        return results.rows
     },
 
     search(params){
