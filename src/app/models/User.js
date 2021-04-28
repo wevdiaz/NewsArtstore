@@ -1,8 +1,3 @@
-const db = require("../../config/db");
-const fs = require("fs");
-const { hash } = require("bcryptjs");
-
-const Product = require("../models/Product");
 const Base = require("./Base");
 
 Base.init({ table: "users"});
@@ -11,29 +6,29 @@ const User = {
 
     ...Base,   
 
-    async delete(id) {
+    // async delete(id) {
         
-        let results = await db.query("SELECT * FROM products WHERE user_id = $1", [id]);
-        const products = results.rows;
+    //     let results = await db.query("SELECT * FROM products WHERE user_id = $1", [id]);
+    //     const products = results.rows;
 
-        const allFilesPromise = products.map(product => Product.files(product.id));
+    //     const allFilesPromise = products.map(product => Product.files(product.id));
 
-        let promiseResults = await Promise.all(allFilesPromise);
+    //     let promiseResults = await Promise.all(allFilesPromise);
 
-        await db.query("DELETE FROM users WHERE id = $1", [id]);
+    //     await db.query("DELETE FROM users WHERE id = $1", [id]);
 
-        promiseResults.map(results => {
-            results.rows.map( file => {
+    //     promiseResults.map(results => {
+    //         results.rows.map( file => {
                 
-                try {
-                    fs.unlinkSync(file.path)
+    //             try {
+    //                 fs.unlinkSync(file.path)
 
-                }catch(err){
-                    console.error(err);
-                }
-            });
-        });
-    }
+    //             }catch(err){
+    //                 console.error(err);
+    //             }
+    //         });
+    //     });
+    // }
 }
 
 module.exports = User;
