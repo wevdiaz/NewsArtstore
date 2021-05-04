@@ -1,3 +1,6 @@
+DROP SCHEMA public CASCADE;
+CREATE SCHEMA public;
+
 DROP DATABASE IF EXISTS newsartstore;
 CREATE DATABASE newsartstore;
 
@@ -27,9 +30,7 @@ CREATE TABLE "files" (
   "product_id" int 
 );
 
-ALTER TABLE "products" ADD FOREIGN KEY ("category_id") REFERENCES "categories" ("id");
 
-ALTER TABLE "files" ADD FOREIGN KEY ("product_id") REFERENCES "products" ("id");
 
 CREATE TABLE "users" (
   "id" SERIAL PRIMARY KEY,  
@@ -45,6 +46,9 @@ CREATE TABLE "users" (
 
 -- foreign Key
 ALTER TABLE "products" ADD FOREIGN KEY ("user_id") REFERENCES "users"  ("id");
+ALTER TABLE "products" ADD FOREIGN KEY ("category_id") REFERENCES "categories" ("id");
+
+ALTER TABLE "files" ADD FOREIGN KEY ("product_id") REFERENCES "products" ("id");
 
 -- Create procedure
 CREATE FUNCTION trigger_set_timestamp()
@@ -70,9 +74,9 @@ EXECUTE PROCEDURE trigger_set_timestamp();
 
 
 -- categories name
-INSERT INTO categories(name) VALUES ('Quadrinhos')
-INSERT INTO categories(name) VALUES ('Bonecos')
-INSERT INTO categories(name) VALUES ('Canecas')
+INSERT INTO categories(name) VALUES ('Quadrinhos');
+INSERT INTO categories(name) VALUES ('Bonecos');
+INSERT INTO categories(name) VALUES ('Canecas');
 
 
 -- connect pg simple table
