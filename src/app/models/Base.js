@@ -56,7 +56,7 @@ const Base = {
                 RETURNING id`;
 
             const results = await db.query(query);
-            return results.rows[0];
+            return results.rows[0].id;
 
         }catch(err) {
             console.error(err);
