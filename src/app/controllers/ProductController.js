@@ -6,7 +6,7 @@ const { formatPrice, date } = require("../../lib/utils");
 
 module.exports = {
 
-    create(req, res) {
+    async create(req, res) {
         try {
             const categories = await Category.findAll();
             return res.render("products/create.njk", { categories } );
