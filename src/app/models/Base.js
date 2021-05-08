@@ -9,7 +9,7 @@ function find(filters, table) {
             query += ` ${key}`;
     
             Object.keys(filters[key]).map(field => {
-                query += ` ${field} = "${filters[key][field]}"`;
+                query += ` ${field} = '${filters[key][field]}'`;
             });
         });
     }
@@ -69,7 +69,7 @@ const Base = {
 
             Object.keys(fields).map( key => {
 
-                const line = `${key} = "${fields[key]}"`;
+                const line = `${key} = '${fields[key]}'`;
                 update.push(line);                
     
             });
