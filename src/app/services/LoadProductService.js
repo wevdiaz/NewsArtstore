@@ -39,7 +39,7 @@ const LoadService = {
     load(service, filter) {
         this.filter = filter;
 
-        return this[service];
+        return this[service]();
     },
 
     async product() {
