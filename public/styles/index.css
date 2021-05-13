@@ -594,12 +594,6 @@ form .item #photos-preview img {
     font-weight: bold;
 }
 
-/* User Register */
-.user-register.container.form {
-    max-width: 500px;
-}
-
-
 /* Validate Errors */
 .input .error {
     background-color: #e74c3c;

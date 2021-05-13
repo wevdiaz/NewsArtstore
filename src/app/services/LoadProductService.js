@@ -9,7 +9,7 @@ async function getImages(productId) {
 
     files = files.map( file => ({
         ...file,
-        src: `${file.path.replace("public", "")}`
+        src: `${file.path.replace("public", "").replace(/\\/g, "/")}`
     }));
 
     return files;
