@@ -254,9 +254,7 @@ const Validate = {
         if (errorDiv) {
             errorDiv.remove();
         }
-    },
-
-    
+    },    
 
     isEmail(value) {
         let error = null;
@@ -303,6 +301,23 @@ const Validate = {
         return {
             error,
             value
+        }
+    },
+
+    allFields(event) {
+        const items = document.querySelectorAll(".item input, .item select, .item textarea");
+
+        for (item of items) {
+            if (item.value == "") {
+                const message = document.createElement("div");
+                message.classList.add("messages");                
+                message.classList.add("error");
+                message.style.position = "fixed";
+                message.innerHTML = "Todos os campos são obrigátorios"; 
+                document.querySelector("body").append(message);
+                
+                event.preventDefault();
+            }
         }
     }
 }
