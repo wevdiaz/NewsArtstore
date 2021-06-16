@@ -52,7 +52,29 @@ const Cart = {
         return this;
     },
 
-    removeOne(productId) {},
+    removeOne(productId) {
+        let inCart = this.items.find( item => item.product.id == productId);
+
+        if (!inCart) return this;
+
+        // Update item
+        inCart.quantity--;
+        inCart.price = inCart.product.price * inCart.quantity;
+        inCart.formattedPrice = formatPrice(inCart.price);
+
+        // Update Cart
+        this.total.quantity--;
+        this.total.price -= inCart.product.price;
+        this.total.formattedPrice = formatPrice(this.total.price);
+
+        if (inCart.quantity < 1) {
+            const itemIndex = this.items.indexOf(inCart);
+            this.items.splice(itemIndex, 1);
+            return this;
+        }
+
+        return this;
+    },
 
     delete(productId) {}
 }
@@ -81,8 +103,12 @@ console.log("terceiro add")
 Cart.init(oldCart).addOne(product2);
 console.log(oldCart);
 
-console.log("last add")
-Cart.init(oldCart).addOne(product);
+console.log("remove one")
+Cart.init(oldCart).removeOne(product.id);
+console.log(oldCart);
+
+console.log("remove two")
+Cart.init(oldCart).removeOne(product.id);
 console.log(oldCart);
 
 module.exports = Cart;
