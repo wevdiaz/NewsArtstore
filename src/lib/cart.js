@@ -21,7 +21,7 @@ const Cart = {
     },
 
     addOne(product) {
-        let inCart = this.items.find( item => item.product.id == product.id );
+        let inCart = this.getCartItem(product.id);
 
         if (!inCart) {
             inCart = {
@@ -53,7 +53,7 @@ const Cart = {
     },
 
     removeOne(productId) {
-        let inCart = this.items.find( item => item.product.id == productId);
+        const inCart = this.getCartItem(productId);
 
         if (!inCart) return this;
 
@@ -76,39 +76,24 @@ const Cart = {
         return this;
     },
 
-    delete(productId) {}
+    delete(productId) {
+        const inCart = this.getCartItem(productId);
+
+        if (!inCart) return this;
+
+        if (this.items.length > 0) {
+            this.total.quantity -= inCart.quantity;
+            this.total.price -= (inCart.product.price * inCart.quantity);
+            this.total.formattedPrice = formatPrice(this.total.price);
+        }
+
+        this.items = this.items.filter( item => inCart.product.id != item.product.id );
+        return this;
+    },
+
+    getCartItem(productId) {
+        return this.items.find( item => item.product.id == productId);
+    }
 }
-
-const product = {
-    id: 1,
-    price: 199,
-    quantity: 2
-}
-
-const product2 = {
-    id: 2,
-    price: 229,
-    quantity: 3
-}
-
-console.log("Primeiro add")
-let oldCart = Cart.init().addOne(product);
-console.log(oldCart);
-
-console.log("segundo add")
-Cart.init(oldCart).addOne(product);
-console.log(oldCart);
-
-console.log("terceiro add")
-Cart.init(oldCart).addOne(product2);
-console.log(oldCart);
-
-console.log("remove one")
-Cart.init(oldCart).removeOne(product.id);
-console.log(oldCart);
-
-console.log("remove two")
-Cart.init(oldCart).removeOne(product.id);
-console.log(oldCart);
 
 module.exports = Cart;
