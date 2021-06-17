@@ -1,0 +1,141 @@
+.cart .header {
+    display: grid;
+    grid-template-columns: 1fr 100px 100px 30px;
+
+    gap: 16px;
+    margin-bottom: 16px;
+
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #999;
+}
+
+.cart .header p:nth-child(2) {
+    text-align: right;
+}
+
+.cart .header p:nth-child(3) {
+    text-align: center;
+}
+
+.cart .item {
+    display: grid;
+    grid-template-columns: 1fr 100px 100px 30px;
+    align-items: center;
+    gap: 16px;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.cart .item:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.cart .item > a {
+    display: flex;
+    align-items: center;
+
+    margin-left: 8px;
+}
+
+.cart .item img {
+    width: 50px;
+    height: 50px;
+
+    object-fit: contain;
+
+    margin-right: 16px;
+
+    box-shadow: 0 2px 4x -2px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+}
+
+.cart .item .title {
+    color: #222;
+}
+
+.cart .item .price {
+    font-weight: bold;
+    text-align: right;
+    color: #555;
+}
+
+.cart .quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart .quantity-control .quantity {
+    margin: 0 8px;    
+    color: #555;
+}
+
+.cart .quantity-control span {
+    color: #555;
+}
+
+.cart span.material-icons,
+.cart .item button {
+    background-color: white;
+}
+
+.cart .add,
+.cart .remove,
+.cart .delete {
+    cursor: pointer;
+}
+
+.cart .delete {
+    color: red;
+}
+
+.cart .total {
+    margin-top: 16px;
+    text-align: right;
+}
+
+.cart .total p {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #777;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.cart .total span {
+    font-weight: bolder;
+    font-size: 22px;
+    color: #444;
+}
+
+.cart .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    margin-top: 16px;
+}
+
+.cart .button.shop {
+    width: 260px;
+}
+
+.cart .button.order {
+    height: 2.84em;
+    background-color: rgba(0, 177, 64);
+    color: white;
+}
+
+.cart .button.order:hover {
+    background-color: rgb(0, 220, 64);
+}
+
+
+
