@@ -156,7 +156,7 @@
 /* ### Menu ### */
 header div.container {
     grid-template-columns: 220px auto 315px;
-    gap: 8px;
+    
 }
 
 li.cart a {
