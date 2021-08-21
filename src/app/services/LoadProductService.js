@@ -1,6 +1,7 @@
 const Product = require("../models/Product");
 
 const { formatPrice, date } = require("../../lib/utils");
+const { lastProductsAdd } = require("../models/Product");
 
 
 
@@ -71,6 +72,12 @@ const LoadService = {
         }catch(err) {
             console.error(err);
         }
+    },
+
+    async lastProducts(){
+        const products = await Product.lastProductsAdd(this.filter);
+        const productsPromise = products.map(format);
+        return Promise.all(productsPromise);
     },
 
     format,

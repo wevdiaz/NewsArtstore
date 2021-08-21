@@ -36,6 +36,11 @@ module.exports = {
         
         const results = await db.query(query);
         return results.rows;
+    },
+
+    async lastProductsAdd() {
+        const results = await db.query(`SELECT * FROM products ORDER BY updated_at DESC`);
+        return results.rows;
     }
 
 }
