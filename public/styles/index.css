@@ -2,6 +2,10 @@
 :root {
     --primary-color: #CCFF00 ;
     --secondary-color: #26C6DA;
+    --hover-color: #34C320;
+    --delete-color: #F78193;
+
+    --text-title: #37C393;    
 }
 
 * {
@@ -65,7 +69,7 @@ footer {
 
 .button:hover {
     color: white;
-    filter: brightness(90%);
+    background-color: var(--hover-color);
 }
 
 .button.delete {
@@ -74,7 +78,7 @@ footer {
 }
 
 .button.button.delete:hover {
-    background-color: #fc85cc;
+    background-color: var(--delete-color);
 }
 
 

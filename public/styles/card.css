@@ -17,6 +17,6 @@
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 16px;
-
-    color: var(--primary-color);
+        
+    color: var(--text-title);
 }
