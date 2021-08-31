@@ -4,28 +4,37 @@
 
 {% block content %}
 
-    {% call cards.render("Meus Anúncios", "users-ads container") %}
+    {% if (products.length < 1)%}
 
-        <div class="items">
-            {% for product in products %}
-                <div class="item">
-                    <div class="image" style="background-image: url({{product.img}})"></div>
+        {% call cards.render("", "cart-empty container") %}
+            <p>Nenhum produto cadastrado no momento.</p>
+            <a href="/ads/create" class="button" id="buy-btn">Cadastre um produto agora</a>
+        {% endcall %}
 
-                    <div class="info">
-                        <div class="title">{{product.name}}</div>
-                        <div class="price">{{product.formattedPrice}}</div>
-                        <div class="published">Publicado em {{product.formattedCreate}}</div>
+    {% else %}
+        {% call cards.render("Meus Anúncios", "users-ads container") %}
 
-                        <div class="actions">
-                            <a href="/products/{{product.id}}/edit">Editar</a>
-                            <a href="/products/{{product.id}}">Ver</a>
-                        </div>
-                    </div>                   
+            <div class="items">
+                {% for product in products %}
+                    <div class="item">
+                        <div class="image" style="background-image: url({{product.img}})"></div>
 
-                </div>
-            {% endfor %}
-        </div>
+                        <div class="info">
+                            <div class="title">{{product.name}}</div>
+                            <div class="price">{{product.formattedPrice}}</div>
+                            <div class="published">Publicado em {{product.formattedCreate}}</div>
 
-    {% endcall %}
+                            <div class="actions">
+                                <a href="/products/{{product.id}}/edit">Editar</a>
+                                <a href="/products/{{product.id}}">Ver</a>
+                            </div>
+                        </div>                   
+
+                    </div>
+                {% endfor %}
+            </div>
+
+        {% endcall %}
+    {% endif %}
 
 {% endblock content %}
