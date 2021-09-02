@@ -19,8 +19,12 @@
 }
 
 .order-success a {
-    color: var(--primary-color);
+    color: var(--hover-color);    
+}
+
+.order-success a:hover {
     font-weight: bold;
+    text-decoration: underline;
 }
 
 .order-error a {

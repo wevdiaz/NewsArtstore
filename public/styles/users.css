@@ -72,8 +72,7 @@
 
 .users-ads .info .actions a {
     margin-right: 16px;
-
-    color: var(--primary-color);
+    color: var(--hover-color);
 }
 
 .users-ads .info .actions a:hover {
@@ -82,4 +81,5 @@
     background-color: black;
     padding: 3px;
     border-radius: 8px;
+    color: var(--primary-color);
 }
