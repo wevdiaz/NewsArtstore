@@ -9,7 +9,7 @@
 <p align="center">
     <a href="#speech_balloon-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#hammer_and_wrench-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="#gear-requesitos">Requesitos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#gear-requisitos">Requisitos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#scroll-licença">Licença</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="https://github.com/wevdiaz/NewsArtstore/tree/main/imgs_app">Imagens</a>
 </p>
@@ -58,7 +58,7 @@ Uma aplicação de uma loja on-line sendo desenvolvida para  aprendizado e técn
 
 
 
-### :gear: Requesitos
+### :gear: Requisitos
 
 * Necessário instalar o node js.*
 
